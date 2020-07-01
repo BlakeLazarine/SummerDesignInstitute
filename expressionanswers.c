@@ -4,6 +4,12 @@
 #define two 2
 #define three 3
 
+/* Please put your name in the string */
+void printName(){
+    char name[30] = "Blake Lazarine";
+    printf("My Name is: %s\n", name);
+}
+
 /*     Math functions (dont modify)     */
 void divide(double *a, double b){
     *a = *a/b;
