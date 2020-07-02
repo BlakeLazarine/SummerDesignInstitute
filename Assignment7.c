@@ -5,12 +5,19 @@ void printName(){
     char name[30] = "Your Name Here";
     printf("My Name is: %s\n", name);
 }
-//expected solution lengths are suggestions not requirements
-//warnings for print statements saying that %x usually wants unsigned are not important and can be ignored
+/*
+
+expected solution lengths are suggestions not requirements
+warnings for print statements saying that %x usually wants unsigned are not important and can be ignored
+These problems are given in no particular order, so feel free to jump around
+
+*/
 
 /*
 1.a)
-Write a function that takes in a 2D array of size n by m that prints out each value along with its memory address. Use array format (no [] anywhere).
+
+Write a function that takes in a 2D array of size n by m that prints out
+each value along with its memory address. Use array format (using []).
 
 expected solution: 3 lines
 */
@@ -21,11 +28,15 @@ void printArr(int n, int m, int arr[n][m]) {
 
 /*
 1.b)
-Write a function that takes in an array (of length n) of arrays (of length m) that prints out each value along with its memory address. Use only pointer format (no [] anywhere).
+Write a function that takes in an array (of length n) of arrays (of length m)
+that prints out each value along with its memory address.
+Use only pointer format (no [] anywhere).
 
 expected solution: 3 lines
 
 AFTER YOU ARE DONE, THINK: Could this work for the part a?
+Don't submit anything for the THINK part, just THINK about it
+You might not know enough yet to fully understand and that's OK
 */
 void printArrPtr(int n, int m, int **arr) {
 	//HINT: use printf("value: %d, addr: 0x%x\n", <value>, <address>);
@@ -52,7 +63,10 @@ void swap(int *a, int *b) {
 
 /*
 3.
-write a function that checks if a variable passed by reference is part of array arr (of length n). Return 2 is i is part of the passed array, 1 if i is not part of the array, but its value can be found within it, and 0 otherwise.
+write a function that checks if i points to part of array arr (of length n).
+Return 2 is i is part of arr,
+1 if i is not part of arr, but its pointed value can be found within arr,
+and 0 otherwise.
 
 expected solution: 6 lines
 */
@@ -64,12 +78,16 @@ int isInArr(int *i, int *arr, int n){
 
 /*
 4.
-I have made a special pointer. It is a pointer to a pointer to a pointer to a pointer to a pointer to a... and so on. At the end is NULL. Write a function that counts how many times you need to follow a pointer to get to the end.
+I have made a special pointer.
+It is a pointer to a pointer to a pointer to a pointer to a pointer to a...
+and so on.
+At the end is NULL.
+Write a function that counts how many times you need to follow a pointer to get to the end.
 ex.
-void *p1 = NULL;
+void *p0 = NULL;
+countlinks(p0);//returns 0
+void *p1 = &p0;
 countlinks(p1);//returns 1
-void *p2 = &p;
-countlinks(p2);//returns 2
 
 HINT: It can be kind of confusing to know how to interperet p.
 In the intended solution, use no cast to check if the end has been reached
@@ -84,9 +102,13 @@ int countlinks(void *p){
 
 /*
 5.
-If I wanted to use a void pointer to iterate through an array arr of n doubles (which consist of 8 bytes), how would I write the loop? Have the function return 0x<your answer>. Also write 1 sentence explaining your choice and 1 sentence explaining what *((double*)p) is doing.
+If I wanted to use a void pointer to iterate through an array arr of n doubles
+(which consist of 8 bytes), how would I write the loop?
+Have the function return 0x<your answer>.
+Also write 1 sentence explaining your choice
+and 1 sentence explaining what *((double*)p) is doing.
 
-HINT: you can write a program and tests what works. Make sure you understand why your answer is correct before you submit.
+HINT: you can write a program and tests what works.
 
 a.
 for(void *p = arr; p < arr + n; p += 1)
@@ -121,7 +143,7 @@ int multipleChoice(){
 
 
 //here are some tests, but you should make some of your own too, as we will run more than these
-//you can leave your main method, our grading system will
+//you can leave your main method, our grading system will replace it with ours
 int main(){
     printName();
 

@@ -1,7 +1,7 @@
 import os
-
 import re
 
+# This is an autograder for assignment 7 (the first one I made)
 name = "pointersanswers"
 f = open(name + ".c", "r")
 contents = f.read()

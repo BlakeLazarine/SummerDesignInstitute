@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1593629384 "expressionlists.tex" "expressionlists.pdf" "expressionlists" 1593639474
+["pdflatex"] 1593640403 "expressionlists.tex" "expressionlists.pdf" "expressionlists" 1593640406
   "c:/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1593562927 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1593561576 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "c:/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1593561576 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -34,10 +34,10 @@
   "c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1593568539 4885538 2371319d2eb236c9633573dd257b259d ""
   "c:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1593568893 2435110 dbc6f016f90565984a92b09e9b12e628 ""
   "c:/texlive/2020/texmf.cnf" 1593568473 673 4ae7b2f49cee444c5343a45b5d0f169c ""
-  "expressionlists.aux" 1593629386 383 ad916ed2c463783466bff5e6310840d9 "pdflatex"
-  "expressionlists.tex" 1593629383 2267 580cedc8a166662285e445a413b88d9d ""
+  "expressionlists.aux" 1593640405 383 ad916ed2c463783466bff5e6310840d9 "pdflatex"
+  "expressionlists.tex" 1593640401 2267 9dc8fb278cd8a683b5f3d9fac7b7e460 ""
   "images/betterDiagram.png" 1593568474 102457 4546e1edc42ac8cecd3b5df884b1ee87 ""
   (generated)
+  "expressionlists.log"
   "expressionlists.aux"
   "expressionlists.pdf"
-  "expressionlists.log"

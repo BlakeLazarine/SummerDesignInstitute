@@ -114,6 +114,7 @@ double eqn3(double test1, double test2, double test3){
  * you can type numbers and whatever else you want here
  */
 int main(){
+    printName();
     eqn1(4, 7, 9);
     eqn2(2, 42, 78);
     eqn3(44, 92, 71);
