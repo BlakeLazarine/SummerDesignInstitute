@@ -11,6 +11,20 @@ expected solution lengths are suggestions not requirements
 warnings for print statements saying that %x usually wants unsigned are not important and can be ignored
 These problems are given in no particular order, so feel free to jump around
 
+I HEAVILY recommend you look at the main method and run tests of your code
+also it may be a good idea to write more test cases of your own,
+since the grading system has its own as well.
+
+Also, please please make sure your code compiles when you submit it
+
+grading scheme
+code compiles - 4 points
+name included - 1 point
+each problem - 3 points
+partial credit is possible for most categories
+total: 20 points
+
+
 */
 
 /*
@@ -22,7 +36,8 @@ each value along with its memory address. Use array format (using []).
 expected solution: 3 lines
 */
 void printArr(int n, int m, int arr[n][m]) {
-	//HINT: use printf("value: %d, addr: 0x%x\n", <value>, <address>);
+	//HINT: copy paste this when you want to print
+    // printf("value: %d, addr: %p\n", <value>, <address>);
 }
 
 
@@ -32,6 +47,8 @@ Write a function that takes in an array (of length n) of arrays (of length m)
 that prints out each value along with its memory address.
 Use only pointer format (no [] anywhere).
 
+IMPORTANT: this is NOT a normal 2D array. It is an array of pointers (which are other arrays)
+a diagram can be seen in the powerpoint
 expected solution: 3 lines
 
 AFTER YOU ARE DONE, THINK: Could this work for the part a?
@@ -39,7 +56,7 @@ Don't submit anything for the THINK part, just THINK about it
 You might not know enough yet to fully understand and that's OK
 */
 void printArrPtr(int n, int m, int **arr) {
-	//HINT: use printf("value: %d, addr: 0x%x\n", <value>, <address>);
+	//HINT: use printf("value: %d, addr: %p\n", <value>, <address>);
 }
 
 
@@ -92,6 +109,14 @@ countlinks(p1);//returns 1
 HINT: It can be kind of confusing to know how to interperet p.
 In the intended solution, use no cast to check if the end has been reached
 we also use (void**)p to interperet p as a pointer to a pointer.
+You can think of this sort of like (void*)*, but syntax forces certain parentheses
+To try and make sense of this, think back to lecture, where we had this line
+int a = *(int*)p;
+This line casts p to be a pointer to an int and gets the integer value it points to.
+if we replace the word int with void* we get
+void* a  = *(void**)p
+in this line, we cast p to be a pointer to another void pointer and get the void pointer value pointed to by p
+That may be a lot of the word pointer but if you just think through it word by word it makes sense
 
 expected solution: 6 lines
 */
@@ -115,7 +140,7 @@ for(void *p = arr; p < arr + n; p += 1)
 	printf("%f\n", *((double*)p));
 
 b.
-for(void *p = arr; p < arr + 8n; p += 8)
+for(void *p = arr; p < arr + 8*n; p += 8)
 	printf("%f\n", *((double*)p));
 
 c.
@@ -123,7 +148,7 @@ for(void *p = arr; p < arr + n; p += 8)
 	printf("%f\n", *((double*)p));
 
 d.
-for(void *p = arr; p < arr + 8n; p += 1)
+for(void *p = arr; p < arr + 8*n; p += 1)
 	printf("%f\n", *((double*)p));
 
 e.
@@ -175,7 +200,7 @@ int main(){
 		printf("error: isIn should be 2, currently is %d\n", isIn);
 
 
-	a = 1;
+	a = 3;
 	isIn = isInArr(&a, sampleArray, 4);
 	if(isIn != 1)
 		printf("error: isIn should be 1, currently is %d\n", isIn);

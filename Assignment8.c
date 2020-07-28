@@ -12,27 +12,27 @@ void printName(){
 
 
 /*     Math functions (dont modify)     */
-void divide(double *a, double b){
-    *a = *a/b;
+void divide(double *operand, double mod){
+    *operand = *operand/mod;
 }
 
-void multiply(double *a, double b){
-    *a = *a*b;
+void multiply(double *operand, double mod){
+    *operand = *operand*mod;
 }
 
-void add(double *a, double b){
-    *a = *a+b;
+void add(double *operand, double mod){
+    *operand = *operand+mod;
 }
 
-void subtract(double *a, double b){
-    *a = *a-b;
+void subtract(double *operand, double mod){
+    *operand = *operand-mod;
 }
 /*     End Math functions     */
 
 /* custom datatype to represent a single action  */
 //expected solution: 1 line
 struct operation {
-    double value;
+    double modifier;
     struct operation* next;
     /*pointer to function (accepts any of the math functions above). please name it math*/
     /*your code here*/
@@ -44,14 +44,30 @@ void constructor(struct operation *op, double value, struct operation* next, voi
     /*Your code here*/
 }
 
-/* the operate function will perform the action outlined by a single operation */
+/*
+the operate function will perform the action outlined by a single operation
+
+Quick exmplanation:
+Each operation struct has a math type and a modifier value
+the operand should be altered by calling the math method
+with a modifier defined by the operation
+
+*/
+
 //expected solution: 1 line
 void operate(struct operation* op, double* operand){
     /*call op's math function with the a input being the operand*/
     /*Your code here*/
 }
 
-/* the evaluate function iterates through an entire list of operations */
+/*
+the evaluate function iterates through an entire list of operations
+
+Thinking back to the previous assignment's countlinks function,
+evaluate should go from one operation to another using the 'next' field
+It should call operate at each step.
+
+*/
 //expected solution: 6 lines
 double evaluate(double in, struct operation* expression){
     /*     apply the expression to the input     */
