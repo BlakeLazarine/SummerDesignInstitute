@@ -75,7 +75,7 @@ double evaluate(double in, struct operation* expression){
 }
 
 /* eqn1 is given as an example */
-double eqn1(double test1, double test2, double test3){
+void eqn1(double test1, double test2, double test3){
     /*     implement expression res = in + 3     */
     struct operation head;
     constructor(&head, three, NULL, add);
@@ -91,7 +91,7 @@ double eqn1(double test1, double test2, double test3){
     printf("expected results eqn1: %f %f %f\n", exp1, exp2, exp3);
 }
 
-double eqn2(double test1, double test2, double test3){
+void eqn2(double test1, double test2, double test3){
     /*     implement expression res = 2*(in - 1)     */
     struct operation head;
     /*   your code here   */
@@ -107,7 +107,7 @@ double eqn2(double test1, double test2, double test3){
     printf("expected results eqn2: %f %f %f\n", exp1, exp2, exp3);
 }
 
-double eqn3(double test1, double test2, double test3){
+void eqn3(double test1, double test2, double test3){
     /*     implement expression res = (2*(in + 1) - 3)/6     */
     struct operation head;
     /*   your code here   */
